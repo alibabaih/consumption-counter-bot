@@ -52,7 +52,7 @@ def set_timer(update: Update, context: CallbackContext) -> None:
         context.job_queue.run_monthly(
             alarm, 
             datetime.time(hour=10, minute=00, tzinfo=pytz.timezone('Europe/Moscow')), 
-            day=int(context.args[0])
+            day=int(context.args[0]),
             context=chat_id, 
             name=str(chat_id)
         )
